@@ -4,7 +4,7 @@ import './App.css'
 import axios from 'axios';
 import Emoji from './components/Characters';
 import CharacterCard from './components/CharacterCard';
-import header from './assets/image 3.png'
+import Picmain from './assets/image 3.png'
 
 function App() {
   //  const [countrylist, setCountryList] = useState([]);
@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src={header} alt="header" />
+        <img src={Picmain} alt="header" />
         <div className="search">
         <input type="text"
           placeholder="Set Location"

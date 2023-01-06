@@ -70,8 +70,9 @@ body{
   text-align: center;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  padding: 0;
+  padding: 1rem;
   list-style: none;
+  justify-items: center;
 }
 
 .card{
