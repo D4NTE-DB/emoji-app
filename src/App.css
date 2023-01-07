@@ -1,6 +1,6 @@
 
 * {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +12,12 @@ body{
   /* text-align: left; */
   background-color: #074e59;
   /* justify-items: center; */
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .search>button{
@@ -48,7 +54,7 @@ body{
   
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   gap: 2rem;
   max-width: 80%;
@@ -58,6 +64,14 @@ body{
   background: #062226;
   color: #FFFFFF;
   margin-top: 50px;
+  max-width: 1280px;
+}
+
+@media (max-width: 600px) {
+  .info-header{
+   overflow-x: scroll; 
+   max-width: 800px;
+  }
 }
 
 .info-header > div > h2{
@@ -70,9 +84,23 @@ body{
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2,1fr);
+  grid-column-end: start;
   padding: 1rem;
   list-style: none;
   justify-items: center;
+  /* max-width: 50%; */
+}
+
+@media (max-width: 599px) {
+  .resident-card{
+    text-align: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1,1fr);
+  padding: 1rem;
+  list-style: none;
+  justify-items: center;
+  }
 }
 
 .card{

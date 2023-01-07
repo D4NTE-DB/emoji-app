@@ -43,7 +43,7 @@ function App() {
         </div>
        
       </header>
-      <div className="info-header">
+      <div className="info-header" >
         <div>
           <h2>Nombre: </h2>
           <h2>{rnm.name}</h2>
