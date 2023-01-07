@@ -16,15 +16,15 @@ function App() {
   const SearchI = () => {
     axios.get(`https://rickandmortyapi.com/api/location/${searchId}`).then(res => SetRnm(res.data));
   }
-  console.log('rer')
-  console.log(rnm.residents?.lenght)
+  // console.log('rer')
+  console.log(rnm.residents?.length)
   return (
     <div className="App">
       <header>
         <img src={Picmain} alt="header" />
         <div className="search">
         <input type="text"
-          placeholder="Set Location"
+          placeholder="Set Location between 1 - 126"
           value={searchId}
           onChange={e => SetSearchId(e.target.value)}
         />
@@ -47,7 +47,7 @@ function App() {
         </div>
         <div>
           <h2>Poblacion: </h2>
-          <h2>{rnm.residents?.lenght}</h2>
+          <h2>{rnm.residents?.length}</h2>
         </div>
       </div>
 
