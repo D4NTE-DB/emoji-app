@@ -97,8 +97,8 @@ header > img {
 .card {
   color: #FFFFFF;
   background-color: #062226;
-  max-width: 350px;
-  max-height: 600px;
+  width: 330px;
+  height: 600px;
   text-align: left;
   padding: 1rem;
 }
