@@ -6,19 +6,8 @@ import CharacterCard from './components/CharacterCard';
 import Picmain from './assets/image 3.png'
 
 function App() {
-  //  const [countrylist, setCountryList] = useState([]);
-  const [pokemonType, SetPokemonType] = useState({});
   const [rnm, SetRnm] = useState({});
   const [searchId, SetSearchId] = useState("");
-  const [character, SetCharacter] = useState({});
-
-
-
-
-  //   useEffect( () =>{
-  //       axios.get(`http://pokeapi.co/api/v2/type/9/`).then((res)=> SetPokemonType(res.data))
-  // }, [])
-
 
   useEffect(() => {
     const randomId = Math.floor(Math.random() * 126) + 1; axios.get(`https://rickandmortyapi.com/api/location/${randomId}`).then((res) => SetRnm(res.data))
@@ -27,8 +16,8 @@ function App() {
   const SearchI = () => {
     axios.get(`https://rickandmortyapi.com/api/location/${searchId}`).then(res => SetRnm(res.data));
   }
-
-
+  console.log('rer')
+  console.log(rnm.residents?.lenght)
   return (
     <div className="App">
       <header>
@@ -58,7 +47,7 @@ function App() {
         </div>
         <div>
           <h2>Poblacion: </h2>
-          <h2>{rnm.dimension}</h2>
+          <h2>{rnm.residents?.lenght}</h2>
         </div>
       </div>
 

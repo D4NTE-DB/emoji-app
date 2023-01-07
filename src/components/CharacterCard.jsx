@@ -5,17 +5,12 @@ import { BoxIconElement } from 'boxicons';
 
 const CharacterCard = ({ url }) => {
     const [character, SetCharacter] = useState({});
-
-    console.log(url)
     useEffect(() => {
         axios.get(`${url}`).then((res) => SetCharacter(res.data))
     }, [])
-    // console.log(`Ser ${Object.keys(character.episode).length}`)
-    // if (!Object.keys(character.episode).length) {
-        console.log(`tres ${character}`)
-        console.log(character.episode?.length)
-    // }
+
     let colorDot = '';
+
     if (character?.status === 'Alive') {
         colorDot = 'green'
     } else {
@@ -27,7 +22,6 @@ const CharacterCard = ({ url }) => {
     return (
         <div>
             <li className='card'>
-               
                 <img src={character.image} alt="" />
                 <div className="status">
                     <box-icon type='solid' name='circle' style={{ fill: colorDot }}></box-icon>
