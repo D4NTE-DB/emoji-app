@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import axios from 'axios';
-import Emoji from './components/Characters';
 import CharacterCard from './components/CharacterCard';
 import Picmain from './assets/image 3.png'
 
@@ -22,7 +21,7 @@ function App() {
 
 
   useEffect(() => {
-    const randomId = Math.floor(Math.random() * 126) + 1; axios.get(`https://rickandmortyapi.com/api/location/32`).then((res) => SetRnm(res.data))
+    const randomId = Math.floor(Math.random() * 126) + 1; axios.get(`https://rickandmortyapi.com/api/location/${randomId}`).then((res) => SetRnm(res.data))
   }, [])
 
   const SearchI = () => {
