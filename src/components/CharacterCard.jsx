@@ -12,7 +12,8 @@ const CharacterCard = ({ url }) => {
     }, [])
     // console.log(`Ser ${Object.keys(character.episode).length}`)
     // if (!Object.keys(character.episode).length) {
-    //     console.log(`tres ${Object.keys(character.episode).length}`)
+        console.log(`tres ${character}`)
+        console.log(character.episode?.length)
     // }
     let colorDot = '';
     if (character?.status === 'Alive') {
@@ -35,7 +36,7 @@ const CharacterCard = ({ url }) => {
                 <h4 style={{ fontSize: "30px" }}>{character.name}</h4>
                 <h4>Raza: {character.species}</h4>
                 <h4>Origen: {character.origin?.name}</h4>
-                <h4>Aparicion en Episodios: </h4>
+                <h4>Aparicion en Episodios: {character.episode?.length}</h4>
             </li>
         </div>
     );
