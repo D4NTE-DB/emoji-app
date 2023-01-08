@@ -4,12 +4,12 @@ import axios from 'axios';
 import CharacterCard from './components/CharacterCard';
 import picHeader from './assets/image 3.png'
 import LoadingScreen from './components/LoadingScreen';
-import iconMid from './components/unnamed.ico'
+import unnamed from './components/unnamed.ico'
 
 function App() {
   const [rnm, SetRnm] = useState({});
   const [searchId, SetSearchId] = useState("");
-  // const [isLoading, SetIsLoading] = useState(true);
+  const [isLoading, SetIsLoading] = useState(true);
 
 
 
@@ -18,6 +18,7 @@ function App() {
     const randomId = Math.floor(Math.random() * 126) + 1; axios.get(`https://rickandmortyapi.com/api/location/${randomId}`)
       .then((res) => {
         SetRnm(res.data)
+        setTimeout(() => SetIsLoading(false), 2000 )
       })
   
   }, [])
@@ -30,9 +31,17 @@ function App() {
   // console.log(rnm.residents?.length)
   return (
     <div className="App">
+      
+      {
+        isLoading ? (
+          
+          <img className='rick-icon' id='rick' src={unnamed} alt="" />
+         
+       ):(
+        <>
       {/* <LoadingScreen /> */}
       <header>
-        <img src={iconMid} alt="" className='icon-header'/>
+        <img src={unnamed} alt="" className='icon-header'/>
         <img src={picHeader} alt="header" className='main-header' />
         <div className="search">
           <input type="text"
@@ -73,7 +82,9 @@ function App() {
             key={resident} />
         ))}
       </div>
-
+      </>
+       )
+      }
 
     </div>
   )

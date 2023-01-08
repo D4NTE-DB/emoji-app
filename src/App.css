@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   align-items: center;
+  max-width: 1280px;
 }
 
 body {
@@ -37,11 +38,18 @@ header > .icon-header{
   width: 20%;
   height: 20%;
   position: relative;
-  top: 22vw;
+  top: 20vw;
   /* right: -4vw; */
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 1500px;
+  /* max-height: 10%; */
+  
 }
+@media (min-width: 1300px) {
+  header > .icon-header{
+    bottom: 20rem;
+  }
+}
+
 
 .search {
   display: flex;
@@ -88,7 +96,6 @@ header > .icon-header{
 @media (max-width: 600px) {
   .info-header {
     overflow-x: scroll;
-    max-width: 800px;
   }
 }
 
@@ -145,4 +152,25 @@ header > .icon-header{
 
 .card>h4 {
   padding: 10px;
+}
+
+.rick-icon{
+  display: flex;
+  margin-top: 28.5vh;
+  position: relative;
+  animation: load 2s infinite;
+}
+
+
+@keyframes load {
+  0%{
+    top:0px;
+  }
+  50%{
+    top: -30px;
+  }
+  100%{
+    top: 0px;
+  }
+  
 }
