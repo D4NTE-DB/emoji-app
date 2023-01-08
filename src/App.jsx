@@ -36,7 +36,7 @@ function App() {
     axios.get(`https://rickandmortyapi.com/api/location/${searchId}`).then(res => SetRnm(res.data));
   }
   // console.log('rer')
-  console.log(rnm.residents?.length)
+  // console.log(rnm.residents?.length)
   return (
     <div className="App">
       {/* <LoadingScreen /> */}
