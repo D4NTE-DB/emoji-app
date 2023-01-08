@@ -39,6 +39,7 @@ function App() {
   console.log(rnm.residents?.length)
   return (
     <div className="App">
+      {/* <LoadingScreen /> */}
       <header>
         <img src={iconMid} alt="" className='icon-header'/>
         <img src={picHeader} alt="header" className='main-header' />

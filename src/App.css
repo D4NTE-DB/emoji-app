@@ -12,6 +12,16 @@ body {
   /* justify-items: center; */
 }
 
+.load-screen{
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.load-screen > img{
+  display: flex;
+  justify-items: center;
+}
+
 header {
   display: flex;
   justify-content: center;

@@ -3,8 +3,9 @@ import icoMid from "./unnamed.ico"
 
 const LoadingScreen = () => {
     return (
-        <div>
+        <div className='load-screen'>
             <img src={icoMid} alt="" />
+            <h3>Loading...</h3>
         </div>
     );
 };
