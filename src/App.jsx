@@ -28,7 +28,7 @@ function App() {
           value={searchId}
           onChange={e => SetSearchId(e.target.value)}
         />
-        <button onClick={SearchI} >Search location</button>
+        <button onClick={SearchI} >Search</button>
         </div>
        
       </header>
