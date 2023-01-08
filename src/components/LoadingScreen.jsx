@@ -1,5 +1,5 @@
 import React from 'react';
-import icoMid from "../components/unnamed.ico"
+import icoMid from "./unnamed.ico"
 
 const LoadingScreen = () => {
     return (
