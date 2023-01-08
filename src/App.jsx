@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import axios from 'axios';
 import CharacterCard from './components/CharacterCard';
-import Picmain from './assets/image 3.png'
+import picHeader from './assets/image 3.png'
 import LoadingScreen from './components/LoadingScreen';
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       <header>
         <img src="/src/components/unnamed.ico" alt="" className='icon-header'/>
-        <img src={Picmain} alt="header" className='main-header' />
+        <img src={picHeader} alt="header" className='main-header' />
         <div className="search">
           <input type="text"
             placeholder="Set Location between 1 - 126"

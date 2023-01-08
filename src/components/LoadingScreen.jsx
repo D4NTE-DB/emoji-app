@@ -1,9 +1,10 @@
 import React from 'react';
+import icoMid from "../components/unnamed.ico"
 
 const LoadingScreen = () => {
     return (
         <div>
-            <img src="/src/components/unnamed.ico" alt="" />
+            <img src={icoMid} alt="" />
         </div>
     );
 };
