@@ -4,6 +4,7 @@ import axios from 'axios';
 import CharacterCard from './components/CharacterCard';
 import picHeader from './assets/image 3.png'
 import LoadingScreen from './components/LoadingScreen';
+import iconMid from './components/unnamed.ico'
 
 function App() {
   const [rnm, SetRnm] = useState({});
@@ -39,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img src="/src/components/unnamed.ico" alt="" className='icon-header'/>
+        <img src={iconMid} alt="" className='icon-header'/>
         <img src={picHeader} alt="header" className='main-header' />
         <div className="search">
           <input type="text"
