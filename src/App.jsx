@@ -9,28 +9,19 @@ import iconMid from './components/unnamed.ico'
 function App() {
   const [rnm, SetRnm] = useState({});
   const [searchId, SetSearchId] = useState("");
-  const [isLoading, SetIsLoading] = useState(true);
+  // const [isLoading, SetIsLoading] = useState(true);
 
 
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      SetIsLoading(false);
-    }, 3000);
+   
     const randomId = Math.floor(Math.random() * 126) + 1; axios.get(`https://rickandmortyapi.com/api/location/${randomId}`)
       .then((res) => {
         SetRnm(res.data)
-        SetIsLoading(false)
-        clearTimeout(timeoutId);
       })
-    return () => {
-      clearTimeout(timeoutId);
-    }
+  
   }, [])
 
-  if (isLoading) {
-    return <LoadingScreen />
-  }
 
   const SearchI = () => {
     axios.get(`https://rickandmortyapi.com/api/location/${searchId}`).then(res => SetRnm(res.data));
