@@ -181,7 +181,7 @@ header > .icon-header{
   border-radius: 10px;
   background: #FFFFFF;
   width: 500px;
-  
+  max-width: 100%;
 }
 
 .suggestions-list > h5{
