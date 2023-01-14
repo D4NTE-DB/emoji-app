@@ -59,7 +59,7 @@ function App() {
         <img src={picHeader} alt="header" className='main-header' />
         <div className="search">
           <input type="text"
-            placeholder="Set Location between 1 - 126"
+            placeholder="Set a Location"
             value={searchId}
             onChange={e => SetSearchId(e.target.value)}
 
