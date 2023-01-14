@@ -65,7 +65,7 @@ header > .icon-header{
 
 .search > input{
   text-align: center;
-  border-radius: 50px;
+  border-radius: 5px;
   width: 500px;
   height: 70%;
 }
@@ -138,6 +138,7 @@ header > .icon-header{
 }
 
 .card>.status {
+  margin-top: -50px;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -146,7 +147,7 @@ header > .icon-header{
   position: relative;
   width: 120px;
   right: 100px;
-  bottom: 120px;
+  bottom: 70px;
   border-radius: 8px;
 }
 
@@ -173,4 +174,23 @@ header > .icon-header{
     top: 0px;
   }
   
+}
+.search > .suggestions-list{
+  position: absolute;
+  top: 40px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  width: 500px;
+  
+}
+
+.suggestions-list > h5{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.suggestions-list > h5:hover{
+  cursor: pointer;
+  background-color: lightblue;
+  border-radius: 10px;
 }

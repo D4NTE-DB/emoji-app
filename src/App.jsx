@@ -10,6 +10,7 @@ function App() {
   const [rnm, SetRnm] = useState({});
   const [searchId, SetSearchId] = useState("");
   const [isLoading, SetIsLoading] = useState(true);
+  const [ locationsSuggestions, setLocationsSuggestions] = useState([]);
 
 
 
@@ -23,12 +24,25 @@ function App() {
   
   }, [])
 
+  useEffect(() => {
+    if(searchId){
+      axios.get(`https://rickandmortyapi.com/api/location?name=${searchId}`)
+        .then(res => setLocationsSuggestions(res.data.results));
+    } else setLocationsSuggestions([]);
+  }, [searchId])
+
+  console.log(locationsSuggestions)
 
   const SearchI = () => {
     axios.get(`https://rickandmortyapi.com/api/location/${searchId}`).then(res => SetRnm(res.data));
   }
   // console.log('rer')
   // console.log(rnm.residents?.length)
+
+  const selectSuggestion = suggestion => {
+    SetRnm(suggestion);
+    SetSearchId("");
+  }
   return (
     <div className="App">
       
@@ -53,7 +67,13 @@ function App() {
           {/* <LoadingScreen /> */}
 
           <button onClick={SearchI} >Search</button>
+          <ul className="suggestions-list">
+          {locationsSuggestions.map(suggestion => (
+            <h5 onClick={() => selectSuggestion(suggestion)}>{suggestion.name}</h5>
+          ))}
+        </ul>
         </div>
+        
 
       </header>
       <div className="info-header" >
