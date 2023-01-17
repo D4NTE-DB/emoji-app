@@ -27,18 +27,20 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: -20%;
 }
 
 header > .main-header {
+  
   max-width: 100%;
 }
 
 header > .icon-header{
-  margin-top: -20%;
+  margin-top: auto;
+  position: relative;
   width: 20%;
   height: 20%;
-  position: relative;
-  top: 20vw;
+  top: 18vw;
   /* right: -4vw; */
   max-width: 1500px;
   /* max-height: 10%; */
