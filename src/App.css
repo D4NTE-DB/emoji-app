@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: -20%;
+  /* margin-top: -20%; */
 }
 
 header > .main-header {

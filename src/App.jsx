@@ -55,7 +55,7 @@ function App() {
         <>
       {/* <LoadingScreen /> */}
       <header>
-        <img src={unnamed} alt="" className='icon-header'/>
+        {/* <img src='' alt="" className='icon-header'/> */}
         <img src={picHeader} alt="header" className='main-header' />
         <div className="search">
           <input type="text"
